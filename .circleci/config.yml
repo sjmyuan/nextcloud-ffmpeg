@@ -8,7 +8,7 @@ jobs:
          echo "$DOCKER_PASS" | docker login --username $DOCKER_USER --password-stdin
 
      # build the application image
-     - run: docker build -t sjmyuan/nextcloud-ffmpeg:$CIRCLE_BRANCH -t sjmyuan/nextcloud-ffmpeg:latest -t sjmyuan/nextcloud-ffmpeg .
+     - run: docker build -t sjmyuan/nextcloud-ffmpeg:latest .
 
      # deploy the image
      - run: docker image push sjmyuan/nextcloud-ffmpeg
