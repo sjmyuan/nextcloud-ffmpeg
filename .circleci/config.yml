@@ -11,5 +11,5 @@ jobs:
      - run: docker build -t sjmyuan/nextcloud-ffmpeg:$CIRCLE_BRANCH -t sjmyuan/nextcloud-ffmpeg:latest -t sjmyuan/nextcloud-ffmpeg .
 
      # deploy the image
-     - run: docker push -a sjmyuan/nextcloud-ffmpeg
+     - run: docker push --all-tags sjmyuan/nextcloud-ffmpeg
 version: 2.1
